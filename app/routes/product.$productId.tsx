@@ -25,7 +25,8 @@ export default function ProductDetail() {
 
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 gap-8 p-8">
-      <div className="md:col-span-2 col-span-1 h-[542px] bg-neutral-400"></div>
+      <div className="md:col-span-2 col-span-1 w-full h-[50vh] sm:h-[70vh] bg-gray-200 rounded-md"></div>
+
       <div className="col-span-1 space-y-8 divide-y divide-gray-900">
         <div className="space-y-4">
           <div>
