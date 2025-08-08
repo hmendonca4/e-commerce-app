@@ -8,6 +8,9 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
+import Navbar from "./routes/navbar";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -41,5 +44,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div>
+      <Provider store={store}>
+        <Navbar />
+        <Outlet />
+      </Provider>
+    </div>
+  );
 }
